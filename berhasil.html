@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Berhasil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="done-page">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <main class="done card">
+    <svg class="check" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="check-circle" cx="26" cy="26" r="23" fill="none"/>
+      <path class="check-mark" fill="none" d="M15 27l8 8 15-17"/>
+    </svg>
+    <h1 id="judul">Pendaftaran Berhasil!</h1>
+    <p class="sub" id="teks"></p>
+
+    <dl class="ringkas" id="ringkas" hidden>
+      <div><dt>Nama</dt><dd id="r-nama"></dd></div>
+      <div><dt>Email</dt><dd id="r-email"></dd></div>
+      <div><dt>Ekstrakurikuler</dt><dd id="r-ekskul"></dd></div>
+      <div><dt>Tanggal daftar</dt><dd id="r-tanggal"></dd></div>
+      <div><dt>Status</dt><dd><span class="badge">Terdaftar</span></dd></div>
+    </dl>
+
+    <div class="aksi">
+      <a class="primary" href="index.html">Kembali ke beranda</a>
+      <a class="ghost" href="index.html#daftar">Daftar lagi</a>
+    </div>
+  </main>
+  <script src="berhasil.js"></script>
+</body>
+</html>

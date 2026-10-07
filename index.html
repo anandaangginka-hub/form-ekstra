@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Ekstrakurikuler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob b1"></div><div class="blob b2"></div>
+
+  <header class="nav">
+    <a class="brand" href="#atas"><span class="logo">E</span> Ekstrakurikuler X-SATA</a>
+    <nav>
+      <a href="#ekskul">Pilihan</a>
+      <a href="#daftar">Daftar</a>
+      <a href="#tanya">Tanya</a>
+    </nav>
+  </header>
+
+  <main id="atas">
+    <section class="hero">
+      <div>
+        <span class="tag">Pendaftaran dibuka</span>
+        <h1>Temukan kegiatan yang bikin kamu berkembang</h1>
+        <p>Ada 14 ekstrakurikuler yang bisa kamu pilih. Daftar online, cepat, dan langsung terkonfirmasi.</p>
+        <a class="cta" href="#daftar">Daftar sekarang</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>14</b><span>Ekstrakurikuler</span></div>
+        <div><b>0</b><span>Form singkat</span></div>
+        <div><b>0</b><span>Biaya daftar</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="ekskul">
+      <h2>Pilih ekstrakurikulermu</h2>
+      <p class="sub">Klik salah satu kartu, pilihannya otomatis terisi di formulir.</p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <div class="two">
+      <section class="card" id="daftar" aria-labelledby="judul-daftar">
+        <h2 id="judul-daftar">Formulir pendaftaran</h2>
+        <form id="formDaftar" novalidate>
+          <div class="field">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" placeholder="Contoh: Muhammad Afgan Thabarani" autocomplete="name">
+            <small class="error" id="err-nama"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="nama@domain.com" autocomplete="email">
+            <small class="hint">Semua penyedia email bisa dipakai (Gmail, Yahoo, Outlook, email sekolah, dll).</small>
+            <small class="error" id="err-email"></small>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="pw">
+                <input type="password" id="password" placeholder="Minimal 8 karakter" autocomplete="new-password">
+                <button type="button" class="toggle" data-target="password" aria-label="Tampilkan password">Lihat</button>
+              </div>
+              <div class="meter" aria-hidden="true"><span id="meter-bar"></span></div>
+              <small class="hint" id="meter-text">Kekuatan password: -</small>
+              <small class="error" id="err-password"></small>
+            </div>
+            <div class="field">
+              <label for="konfirmasi">Konfirmasi password</label>
+              <div class="pw">
+                <input type="password" id="konfirmasi" placeholder="Ulangi password" autocomplete="new-password">
+                <button type="button" class="toggle" data-target="konfirmasi" aria-label="Tampilkan konfirmasi password">Lihat</button>
+              </div>
+              <small class="error" id="err-konfirmasi"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="ekskul-select">Pilihan ekstrakurikuler</label>
+            <select id="ekskul-select"><option value="">-- Pilih ekstrakurikuler --</option></select>
+            <small class="error" id="err-ekskul"></small>
+          </div>
+          <button type="submit" class="primary" id="btn-daftar">Daftar sekarang</button>
+        </form>
+      </section>
+
+      <section class="card" id="tanya" aria-labelledby="judul-tanya">
+        <h2 id="judul-tanya">Ada pertanyaan seputar pendaftaran?</h2>
+        <div class="faq">
+          <details><summary>Siapa yang boleh mendaftar?</summary><p>Semua siswa aktif. Kamu bisa memilih satu ekstrakurikuler saat mengisi formulir.</p></details>
+          <details><summary>Kapan kegiatan dimulai?</summary><p>Jadwal latihan diumumkan oleh pembina masing-masing ekstrakurikuler setelah pendaftaran ditutup.</p></details>
+          <details><summary>Bisa pindah ekstrakurikuler?</summary><p>Bisa. Tanyakan lewat kolom di bawah atau langsung ke pembina.</p></details>
+        </div>
+        <form id="formTanya" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="t-nama">Nama</label>
+              <input type="text" id="t-nama" placeholder="Nama kamu" autocomplete="name">
+              <small class="error" id="err-t-nama"></small>
+            </div>
+            <div class="field">
+              <label for="t-email">Email</label>
+              <input type="email" id="t-email" placeholder="nama@domain.com" autocomplete="email">
+              <small class="error" id="err-t-email"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="t-topik">Topik</label>
+            <select id="t-topik">
+              <option value="">-- Pilih topik --</option>
+              <option>Cara mendaftar</option><option>Jadwal kegiatan</option>
+              <option>Persyaratan</option><option>Biaya / perlengkapan</option><option>Lainnya</option>
+            </select>
+            <small class="error" id="err-t-topik"></small>
+          </div>
+          <div class="field">
+            <label for="t-pesan">Pertanyaan</label>
+            <textarea id="t-pesan" rows="4" maxlength="300" placeholder="Tulis pertanyaanmu di sini..."></textarea>
+            <small class="hint" id="t-count">0 / 300</small>
+            <small class="error" id="err-t-pesan"></small>
+          </div>
+          <button type="submit" class="primary alt">Kirim pertanyaan</button>
+        </form>
+        <div id="daftar-tanya" hidden>
+          <h3>Pertanyaan terkirim</h3>
+          <ul id="list-tanya"></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">Pendaftaran Ekstrakurikuler &middot; LKPD 6</footer>
+  <script src="script.js"></script>
+</body>
+</html>
